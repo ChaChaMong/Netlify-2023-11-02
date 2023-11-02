@@ -16,18 +16,18 @@
 </head>
 <body class='container'>
 <h1>자기소개</h1>
-<textarea class="form-control" rows="3" id="jasoseol" onkeydown="counter();">저는 인성 문제가 없습니다.</textarea> <!-- onkeydown을 이용해 event 설정 -->
+<textarea class="form-control" rows="3" id="jasoseol" onkeydown="counter();">저는 인성 문제가 없습니다.</textarea>
 <span id="count">(0/200)</span>
 <script>
   function counter() {
-    var content = document.getElementById('jasoseol').value; <!-- 특정 html의 값을 가져올 수 있다. -->
+    var content = document.getElementById('jasoseol').value;
     if (content.length > 200) {
       content = content.substring(0,200);
       document.getElementById('jasoseol').value = content;
     }
-    document.getElementById('count').innerHTML = '(' + content.length + '/200)'; <!-- 특정 값을 html에 넣을 수 있다. 위의 #count에 -->
+    document.getElementById('count').innerHTML = '(' + content.length + '/200)';
   }
-  counter(); <!-- 함수를 작성해 쉽게 사용 가능 -->
+  counter();
 </script>
 </body>
 </html>
