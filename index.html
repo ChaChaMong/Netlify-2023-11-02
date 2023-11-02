@@ -16,11 +16,10 @@
 </head>
 <body class='container'>
 <h1>자기소개</h1>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<textarea class="form-control" rows="3" id="jasoseol" onkeydown="counter();">내용을 입력해주세요</textarea>
+<textarea class="form-control" rows="3" id="jasoseol" onkeydown="e();">내용을 입력해주세요</textarea>
 <span id="count">(0/200)</span>
 <script>
-  function counter() {
+  function e() {
     var content = document.getElementById('jasoseol').value;
     if (content.length > 200) {
       content = content.substring(0,200);
@@ -28,7 +27,7 @@
     }
     document.getElementById('count').innerHTML = '(' + content.length + '/200)';
   }
-  counter();
+  e();
 </script>
 </body>
 </html>
